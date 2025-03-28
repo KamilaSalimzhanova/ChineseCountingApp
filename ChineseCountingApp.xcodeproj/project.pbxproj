@@ -17,6 +17,7 @@
 		8EC9B0D82D96A44E0008A8B8 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0D72D96A44E0008A8B8 /* GameModel.swift */; };
 		8EC9B0DB2D96A5B60008A8B8 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0DA2D96A5B60008A8B8 /* Int+Extension.swift */; };
 		8EC9B0E12D96A9B30008A8B8 /* SpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0E02D96A9B30008A8B8 /* SpeechManager.swift */; };
+		8EC9B0E32D96AC1B0008A8B8 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0E22D96AC1B0008A8B8 /* GameViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +51,7 @@
 		8EC9B0D72D96A44E0008A8B8 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
 		8EC9B0DA2D96A5B60008A8B8 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		8EC9B0E02D96A9B30008A8B8 /* SpeechManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechManager.swift; sourceTree = "<group>"; };
+		8EC9B0E22D96AC1B0008A8B8 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -148,6 +150,7 @@
 		8EC9B0D52D96A43C0008A8B8 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				8EC9B0E22D96AC1B0008A8B8 /* GameViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -306,6 +309,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EC9B0E32D96AC1B0008A8B8 /* GameViewModel.swift in Sources */,
 				8EC9B0AD2D96A2700008A8B8 /* ContentView.swift in Sources */,
 				8EC9B0E12D96A9B30008A8B8 /* SpeechManager.swift in Sources */,
 				8EC9B0DB2D96A5B60008A8B8 /* Int+Extension.swift in Sources */,

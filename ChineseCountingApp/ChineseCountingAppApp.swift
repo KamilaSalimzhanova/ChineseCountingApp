@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct ChineseCountingAppApp: App {
+    @StateObject private var gvm: GameViewModel = GameViewModel()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(gvm)
         }
     }
 }

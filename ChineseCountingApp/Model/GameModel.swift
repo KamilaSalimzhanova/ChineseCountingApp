@@ -25,6 +25,6 @@ struct GameModel {
         alternatives = alternatives.shuffled()
     }
     static var defaultGameModel: GameModel {
-        .init(maxTurns: 5, score: 0, volume: 0.7, turns: 0, answer: 10, alternatives:  Int.generateUniqueRandomIntegers(count: 4))
+        .init(maxTurns: 5, score: 0, volume: 0.05, turns: 0, answer: 10, alternatives:  Int.generateUniqueRandomIntegers(count: 4))
     }
 }
