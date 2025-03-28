@@ -36,7 +36,7 @@ struct ContentView: View {
             .padding()
             .toolbar {
                 ToolbarItem(placement: .navigationBarLeading) {
-                    NavigationLink(destination: GearIconView()) {
+                    NavigationLink(destination: SettingsView()) {
                         Image(systemName: "gearshape")
                             .imageScale(.large)
                             .foregroundColor(.black)
