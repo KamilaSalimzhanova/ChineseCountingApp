@@ -33,28 +33,11 @@ struct GameOverView: View {
                 .overlay(RoundedRectangle(cornerRadius: 20).stroke(.black, lineWidth: 5))
                 .padding(.top, 50)
                 Spacer()
-                VStack(alignment: .center) {
-                    Text("\(pvm.proverbModel.pinyin)")
-                    Text("\(pvm.proverbModel.proverb)")
-                    Text("\(pvm.proverbModel.translation)")
-                }
-                .font(.title)
-                .minimumScaleFactor(0.5)
-                .lineLimit(3)
-                .multilineTextAlignment(.center)
-                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 20))
-                .overlay(RoundedRectangle(cornerRadius: 20).stroke(.black, lineWidth: 5))
-                .frame(maxWidth: 500)
-                .padding()
-                Spacer()
             }
             Spacer()
         }
         .onTapGesture {
             gvm.gameModel.resetGame()
-        }
-        .onAppear {
-            pvm.getRandomQuote()
         }
     }
 }
