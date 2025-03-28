@@ -9,6 +9,7 @@ import SwiftUI
 
 struct GameOverView: View {
     @EnvironmentObject var gvm: GameViewModel
+    @EnvironmentObject var pvm: ProverViewModel
     let color: Color
     let bgColor: Color
     var body: some View {
@@ -30,17 +31,38 @@ struct GameOverView: View {
                 .padding()
                 .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 20))
                 .overlay(RoundedRectangle(cornerRadius: 20).stroke(.black, lineWidth: 5))
+                .padding(.top, 50)
+                Spacer()
+                VStack(alignment: .center) {
+                    Text("\(pvm.proverbModel.pinyin)")
+                    Text("\(pvm.proverbModel.proverb)")
+                    Text("\(pvm.proverbModel.translation)")
+                }
+                .font(.title)
+                .minimumScaleFactor(0.5)
+                .lineLimit(3)
+                .multilineTextAlignment(.center)
+                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 20))
+                .overlay(RoundedRectangle(cornerRadius: 20).stroke(.black, lineWidth: 5))
+                .frame(maxWidth: 500)
+                .padding()
+                Spacer()
             }
             Spacer()
         }
         .onTapGesture {
             gvm.gameModel.resetGame()
         }
+        .onAppear {
+            pvm.getRandomQuote()
+        }
     }
 }
 
 struct GameOver_Previews: PreviewProvider {
     static var previews: some View {
-        GameOverView(color: .white, bgColor: .green).environmentObject(GameViewModel())
+        GameOverView(color: .white, bgColor: .green)
+            .environmentObject(GameViewModel())
+            .environmentObject(ProverViewModel())
     }
 }
