@@ -18,6 +18,9 @@
 		8EC9B0DB2D96A5B60008A8B8 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0DA2D96A5B60008A8B8 /* Int+Extension.swift */; };
 		8EC9B0E12D96A9B30008A8B8 /* SpeechManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0E02D96A9B30008A8B8 /* SpeechManager.swift */; };
 		8EC9B0E32D96AC1B0008A8B8 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0E22D96AC1B0008A8B8 /* GameViewModel.swift */; };
+		8EC9B0E52D96D4BA0008A8B8 /* GearIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0E42D96D4BA0008A8B8 /* GearIconView.swift */; };
+		8EC9B0E72D9701660008A8B8 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0E62D9701660008A8B8 /* ScoreView.swift */; };
+		8EC9B0E92D9703170008A8B8 /* PinyanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0E82D9703170008A8B8 /* PinyanView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,6 +55,9 @@
 		8EC9B0DA2D96A5B60008A8B8 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 		8EC9B0E02D96A9B30008A8B8 /* SpeechManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechManager.swift; sourceTree = "<group>"; };
 		8EC9B0E22D96AC1B0008A8B8 /* GameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
+		8EC9B0E42D96D4BA0008A8B8 /* GearIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GearIconView.swift; sourceTree = "<group>"; };
+		8EC9B0E62D9701660008A8B8 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
+		8EC9B0E82D9703170008A8B8 /* PinyanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyanView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -143,6 +149,9 @@
 		8EC9B0D42D96A4380008A8B8 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				8EC9B0E42D96D4BA0008A8B8 /* GearIconView.swift */,
+				8EC9B0E62D9701660008A8B8 /* ScoreView.swift */,
+				8EC9B0E82D9703170008A8B8 /* PinyanView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -310,7 +319,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC9B0E32D96AC1B0008A8B8 /* GameViewModel.swift in Sources */,
+				8EC9B0E72D9701660008A8B8 /* ScoreView.swift in Sources */,
 				8EC9B0AD2D96A2700008A8B8 /* ContentView.swift in Sources */,
+				8EC9B0E92D9703170008A8B8 /* PinyanView.swift in Sources */,
+				8EC9B0E52D96D4BA0008A8B8 /* GearIconView.swift in Sources */,
 				8EC9B0E12D96A9B30008A8B8 /* SpeechManager.swift in Sources */,
 				8EC9B0DB2D96A5B60008A8B8 /* Int+Extension.swift in Sources */,
 				8EC9B0AB2D96A2700008A8B8 /* ChineseCountingAppApp.swift in Sources */,

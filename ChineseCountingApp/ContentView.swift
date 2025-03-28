@@ -8,25 +8,29 @@
 import SwiftUI
 
 struct ContentView: View {
-    @EnvironmentObject var gvm: GameViewModel 
+    @State private var isShowingPinyan = true
+    @EnvironmentObject var gvm: GameViewModel
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundColor(.accentColor)
-            Text("Hello, world!")
-            
-            Button("7") {
-                gvm.playNumber(7)
+        NavigationStack {
+            VStack {
+                ScoreView(score: gvm.gameModel.score, maxTurns: gvm.gameModel.maxTurns)
+                    .padding()
+                PinyanView(showPinyanView: $isShowingPinyan)
+                Spacer()
             }
-            Button("30") {
-                gvm.playNumber(30)
+            .padding()
+            .toolbar {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    NavigationLink(destination: GearIconView()) {
+                        Image(systemName: "gearshape")
+                            .imageScale(.large)
+                            .foregroundColor(.black)
+                    }
+                }
             }
-            Button("74") {
-                gvm.playNumber(74)
-            }
+            .navigationTitle("Chinese Counting")
+            .navigationBarTitleDisplayMode(.inline)
         }
-        .padding()
     }
 }
 
