@@ -11,7 +11,7 @@ struct PinyanView: View {
     @Binding var showPinyanView: Bool
     var body: some View {
         Toggle(showPinyanView ? "Hide spelled sounds" :  "Show spelled sounds", isOn: $showPinyanView.animation())
-            .padding(.horizontal)
+            .padding()
             .tint(.black)
             .fontWeight(.semibold)
     }

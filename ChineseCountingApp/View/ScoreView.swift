@@ -14,11 +14,11 @@ struct ScoreView: View {
         Text("Score \(score) out of \(maxTurns)")
             .font(.largeTitle)
             .fontWeight(.semibold)
-            .foregroundStyle(LinearGradient(
-                colors: [Color.black.opacity(0.6), Color.red, Color.purple],
-                startPoint: .topLeading,
-                endPoint: .bottomTrailing
-            ))
+//            .foregroundStyle(LinearGradient(
+//                colors: [Color.black.opacity(0.6), Color.red, Color.purple],
+//                startPoint: .topLeading,
+//                endPoint: .bottomTrailing
+//            ))
             .shadow(color: .gray.opacity(0.6), radius: 4, x: 2, y: 2)
             .padding()
             .scaleEffect(1.1)

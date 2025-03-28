@@ -13,6 +13,10 @@ struct GameModel {
     var gameOver: Bool {
         score < 0 || gameWon
     }
+    static var defaultGameModel: GameModel {
+        .init(maxTurns: 5, score: 0, volume: 0.05, turns: 0, answer: 10, alternatives: [10, 1, 2, 3])
+    }
+    
     mutating func increaseScore() {
         score += 1
     }
@@ -24,7 +28,8 @@ struct GameModel {
         answer = alternatives[3]
         alternatives = alternatives.shuffled()
     }
-    static var defaultGameModel: GameModel {
-        .init(maxTurns: 5, score: 0, volume: 0.05, turns: 0, answer: 10, alternatives:  Int.generateUniqueRandomIntegers(count: 4))
+    mutating func resetGame() {
+        score = 0
+        turns = 0
     }
 }

@@ -9,7 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     @State private var isShowingPinyan = true
+    @State private var done: Bool = false
     @EnvironmentObject var gvm: GameViewModel
+    
+    var gameOver: Bool {
+        gvm.gameModel.gameOver
+    }
+    
     var body: some View {
         NavigationStack {
             VStack {
@@ -17,6 +23,15 @@ struct ContentView: View {
                     .padding()
                 PinyanView(showPinyanView: $isShowingPinyan)
                 Spacer()
+                ChineseView(answer: gvm.gameModel.answer, showPinyan: isShowingPinyan)
+                Spacer()
+                NumberOptionsView(numbers: gvm.gameModel.alternatives, answer: gvm.gameModel.answer)
+                    .onChange(of: gvm.gameModel.turns) { _ in
+                        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+                            gvm.gameModel.generateNewProblem()
+                            //print("TURN \(gvm.gameModel.turns)")
+                        }
+                    }
             }
             .padding()
             .toolbar {
@@ -28,6 +43,12 @@ struct ContentView: View {
                     }
                 }
             }
+            .fullScreenCover(isPresented: $done) {
+                GameOverView(color: .white, bgColor: .green)
+            }
+            .onChange(of: gameOver, perform: { newValue in
+                done = gameOver
+            })
             .navigationTitle("Chinese Counting")
             .navigationBarTitleDisplayMode(.inline)
         }

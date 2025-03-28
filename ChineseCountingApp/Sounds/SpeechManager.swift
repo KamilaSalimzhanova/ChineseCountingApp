@@ -1,39 +1,34 @@
 import Foundation
 import AVFoundation
 
-final class SpeechManager {
+final class SpeechManager: NSObject, AVSpeechSynthesizerDelegate {
     private let synthesizer = AVSpeechSynthesizer()
+    var onSpeechEnd: (() -> Void)?
     
     static let speechManager = SpeechManager()
-    private init() {}
     
-    func speekNumber(_ number: Int, volume: Double) {
-        let chineseNumbers = ["零", "一", "二", "三", "四", "五", "六", "七", "八", "九", "十"]
-        guard number >= 0, number < 10 else {
+    override init() {
+        super.init()
+        synthesizer.delegate = self
+    }
+    
+    func speechSynthesizer(_ synthesizer: AVSpeechSynthesizer, didFinish utterance: AVSpeechUtterance) {
+        onSpeechEnd?()
+    }
+    
+    func speakNumber(_ number: Int, volume: Double) {
+        guard let (chinese, _) = Chinese.num99toChinese(number) else {
             print("Number out of range")
             return
         }
-        speak(text: chineseNumbers[number], language: "zh-CN", volume: volume)
+        speak(text: chinese, language: "zh-CN", volume: volume)
     }
     
     func speakJoy(_ message: String, volume: Double) {
-        let joyfulMessages = ["whoop", "bell", "awesome", "correct", "yes"]
-        
-        guard joyfulMessages.contains(message.lowercased()) else {
-            print("Invalid joy message")
-            return
-        }
         speak(text: message, language: "en-US", volume: volume)
     }
     
     func speakIncorrect(_ message: String, volume: Double) {
-        let incorrectMessages = ["oh no", "incorrect answer", "weak"]
-        
-        guard incorrectMessages.contains(message.lowercased()) else {
-            print("Invalid incorrect message")
-            return
-        }
-        
         speak(text: message, language: "en-US", volume: volume)
     }
     

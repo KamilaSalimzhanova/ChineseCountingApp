@@ -8,34 +8,36 @@ final class GameViewModel: ObservableObject {
         speechManager.speakJoy( ["whoop", "bell", "awesome", "correct", "yes"].randomElement() ?? "awesome", volume: gameModel.volume)
     }
     func randomIncorrectAnswer() {
-        speechManager.speakIncorrect(["oh no", "incorrect answer", "weak"].randomElement() ?? "incorrect answer", volume: gameModel.volume)
+        speechManager.speakIncorrect(["oh no", "incorrect answer", "sorry"].randomElement() ?? "incorrect answer", volume: gameModel.volume)
     }
+    
     func playNumber(_ num: Int) {
-        switch num {
-        case 0...10: playDigit(num)
-        case 11...19:
-            playDigit(10)
-            playDigit(num % 10)
-        case 20...99:
-            let digit = num%10
-            playDigit(num/10)
-            playDigit(10)
-            if digit != 0 {
-                playDigit(digit)
+        speechManager.onSpeechEnd = {
+            DispatchQueue.main.async {
+                self.gameModel.nextTurn()
             }
-        default: speechManager.speakJoy("bell", volume: gameModel.volume)
+        }
+        
+        switch num {
+        case 0...10:
+            playDigit(num)
+        case 11...19:
+            playDigit(10)  // Play "shí"
+            playDigit(num % 10) // Play the second digit
+        case 20...99:
+            let tens = num / 10
+            let ones = num % 10
+            playDigit(tens)  // Play first digit
+            playDigit(10)    // Play "shí"
+            if ones != 0 {
+                playDigit(ones)  // Play second digit if it's not zero
+            }
+        default:
+            speechManager.speakJoy("bell", volume: gameModel.volume)
         }
     }
+    
     private func playDigit(_ num: Int) {
-        if num >= 0 && num <= 10 {
-            speechManager.speekNumber(num, volume: gameModel.volume)
-        }
+        speechManager.speakNumber(num, volume: gameModel.volume)
     }
-//    private func DigitToName(_ num: Int) -> String? {
-//        let digitNames = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]
-//        if num >= 0 && num <= 10 {
-//            return digitNames[num]
-//        }
-//        return nil
-//    }
 }
