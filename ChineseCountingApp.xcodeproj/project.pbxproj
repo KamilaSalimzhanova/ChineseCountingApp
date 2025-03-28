@@ -14,6 +14,8 @@
 		8EC9B0BC2D96A2710008A8B8 /* ChineseCountingAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0BB2D96A2710008A8B8 /* ChineseCountingAppTests.swift */; };
 		8EC9B0C62D96A2710008A8B8 /* ChineseCountingAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0C52D96A2710008A8B8 /* ChineseCountingAppUITests.swift */; };
 		8EC9B0C82D96A2710008A8B8 /* ChineseCountingAppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0C72D96A2710008A8B8 /* ChineseCountingAppUITestsLaunchTests.swift */; };
+		8EC9B0D82D96A44E0008A8B8 /* GameModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0D72D96A44E0008A8B8 /* GameModel.swift */; };
+		8EC9B0DB2D96A5B60008A8B8 /* Int+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0DA2D96A5B60008A8B8 /* Int+Extension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		8EC9B0C12D96A2710008A8B8 /* ChineseCountingAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChineseCountingAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EC9B0C52D96A2710008A8B8 /* ChineseCountingAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseCountingAppUITests.swift; sourceTree = "<group>"; };
 		8EC9B0C72D96A2710008A8B8 /* ChineseCountingAppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChineseCountingAppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8EC9B0D72D96A44E0008A8B8 /* GameModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameModel.swift; sourceTree = "<group>"; };
+		8EC9B0DA2D96A5B60008A8B8 /* Int+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extension.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,10 @@
 		8EC9B0A92D96A2700008A8B8 /* ChineseCountingApp */ = {
 			isa = PBXGroup;
 			children = (
+				8EC9B0D92D96A5A10008A8B8 /* Extensions */,
+				8EC9B0D62D96A4400008A8B8 /* Model */,
+				8EC9B0D52D96A43C0008A8B8 /* ViewModel */,
+				8EC9B0D42D96A4380008A8B8 /* View */,
 				8EC9B0AA2D96A2700008A8B8 /* ChineseCountingAppApp.swift */,
 				8EC9B0AC2D96A2700008A8B8 /* ContentView.swift */,
 				8EC9B0AE2D96A2710008A8B8 /* Assets.xcassets */,
@@ -125,6 +133,36 @@
 				8EC9B0C72D96A2710008A8B8 /* ChineseCountingAppUITestsLaunchTests.swift */,
 			);
 			path = ChineseCountingAppUITests;
+			sourceTree = "<group>";
+		};
+		8EC9B0D42D96A4380008A8B8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8EC9B0D52D96A43C0008A8B8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		8EC9B0D62D96A4400008A8B8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				8EC9B0D72D96A44E0008A8B8 /* GameModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8EC9B0D92D96A5A10008A8B8 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				8EC9B0DA2D96A5B60008A8B8 /* Int+Extension.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -258,7 +296,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC9B0AD2D96A2700008A8B8 /* ContentView.swift in Sources */,
+				8EC9B0DB2D96A5B60008A8B8 /* Int+Extension.swift in Sources */,
 				8EC9B0AB2D96A2700008A8B8 /* ChineseCountingAppApp.swift in Sources */,
+				8EC9B0D82D96A44E0008A8B8 /* GameModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
