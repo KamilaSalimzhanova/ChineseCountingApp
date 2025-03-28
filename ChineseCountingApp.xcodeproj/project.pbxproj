@@ -21,6 +21,8 @@
 		8EC9B0E52D96D4BA0008A8B8 /* GearIconView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0E42D96D4BA0008A8B8 /* GearIconView.swift */; };
 		8EC9B0E72D9701660008A8B8 /* ScoreView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0E62D9701660008A8B8 /* ScoreView.swift */; };
 		8EC9B0E92D9703170008A8B8 /* PinyanView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0E82D9703170008A8B8 /* PinyanView.swift */; };
+		8EC9B0EC2D9704A00008A8B8 /* Chinese.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0EB2D9704A00008A8B8 /* Chinese.swift */; };
+		8EC9B0EE2D9705160008A8B8 /* ChineseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0ED2D9705160008A8B8 /* ChineseTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +60,8 @@
 		8EC9B0E42D96D4BA0008A8B8 /* GearIconView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GearIconView.swift; sourceTree = "<group>"; };
 		8EC9B0E62D9701660008A8B8 /* ScoreView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoreView.swift; sourceTree = "<group>"; };
 		8EC9B0E82D9703170008A8B8 /* PinyanView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinyanView.swift; sourceTree = "<group>"; };
+		8EC9B0EB2D9704A00008A8B8 /* Chinese.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chinese.swift; sourceTree = "<group>"; };
+		8EC9B0ED2D9705160008A8B8 /* ChineseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = ChineseTest.swift; path = ../../ChineseTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +113,7 @@
 			isa = PBXGroup;
 			children = (
 				8EC9B0DC2D96A72F0008A8B8 /* Sounds */,
+				8EC9B0EA2D9704950008A8B8 /* Helpers */,
 				8EC9B0D92D96A5A10008A8B8 /* Extensions */,
 				8EC9B0D62D96A4400008A8B8 /* Model */,
 				8EC9B0D52D96A43C0008A8B8 /* ViewModel */,
@@ -133,6 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				8EC9B0BB2D96A2710008A8B8 /* ChineseCountingAppTests.swift */,
+				8EC9B0ED2D9705160008A8B8 /* ChineseTest.swift */,
 			);
 			path = ChineseCountingAppTests;
 			sourceTree = "<group>";
@@ -186,6 +192,14 @@
 				8EC9B0E02D96A9B30008A8B8 /* SpeechManager.swift */,
 			);
 			path = Sounds;
+			sourceTree = "<group>";
+		};
+		8EC9B0EA2D9704950008A8B8 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8EC9B0EB2D9704A00008A8B8 /* Chinese.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -327,6 +341,7 @@
 				8EC9B0DB2D96A5B60008A8B8 /* Int+Extension.swift in Sources */,
 				8EC9B0AB2D96A2700008A8B8 /* ChineseCountingAppApp.swift in Sources */,
 				8EC9B0D82D96A44E0008A8B8 /* GameModel.swift in Sources */,
+				8EC9B0EC2D9704A00008A8B8 /* Chinese.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,6 +350,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8EC9B0BC2D96A2710008A8B8 /* ChineseCountingAppTests.swift in Sources */,
+				8EC9B0EE2D9705160008A8B8 /* ChineseTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
