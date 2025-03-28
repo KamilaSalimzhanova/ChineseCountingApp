@@ -27,6 +27,8 @@
 		8EC9B0F22D970BA80008A8B8 /* NumberOptionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0F12D970BA80008A8B8 /* NumberOptionsView.swift */; };
 		8EC9B0F42D970BCA0008A8B8 /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0F32D970BCA0008A8B8 /* CircleView.swift */; };
 		8EC9B0F72D9716010008A8B8 /* GameOverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0F62D9716010008A8B8 /* GameOverView.swift */; };
+		8EC9B0F92D971C1D0008A8B8 /* ProverbMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0F82D971C1D0008A8B8 /* ProverbMode.swift */; };
+		8EC9B0FB2D971E450008A8B8 /* ProverbViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EC9B0FA2D971E450008A8B8 /* ProverbViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,6 +72,8 @@
 		8EC9B0F12D970BA80008A8B8 /* NumberOptionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberOptionsView.swift; sourceTree = "<group>"; };
 		8EC9B0F32D970BCA0008A8B8 /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
 		8EC9B0F62D9716010008A8B8 /* GameOverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameOverView.swift; sourceTree = "<group>"; };
+		8EC9B0F82D971C1D0008A8B8 /* ProverbMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProverbMode.swift; sourceTree = "<group>"; };
+		8EC9B0FA2D971E450008A8B8 /* ProverbViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProverbViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -178,6 +182,7 @@
 			isa = PBXGroup;
 			children = (
 				8EC9B0E22D96AC1B0008A8B8 /* GameViewModel.swift */,
+				8EC9B0FA2D971E450008A8B8 /* ProverbViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 			isa = PBXGroup;
 			children = (
 				8EC9B0D72D96A44E0008A8B8 /* GameModel.swift */,
+				8EC9B0F82D971C1D0008A8B8 /* ProverbMode.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -356,6 +362,8 @@
 				8EC9B0F72D9716010008A8B8 /* GameOverView.swift in Sources */,
 				8EC9B0AB2D96A2700008A8B8 /* ChineseCountingAppApp.swift in Sources */,
 				8EC9B0D82D96A44E0008A8B8 /* GameModel.swift in Sources */,
+				8EC9B0F92D971C1D0008A8B8 /* ProverbMode.swift in Sources */,
+				8EC9B0FB2D971E450008A8B8 /* ProverbViewModel.swift in Sources */,
 				8EC9B0F22D970BA80008A8B8 /* NumberOptionsView.swift in Sources */,
 				8EC9B0EC2D9704A00008A8B8 /* Chinese.swift in Sources */,
 			);

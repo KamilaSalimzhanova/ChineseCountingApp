@@ -17,6 +17,7 @@ struct GameOverView: View {
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()
+                .opacity(0.8)
             VStack {
                 VStack {
                     Text("Game is over!")
